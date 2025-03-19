@@ -1,0 +1,70 @@
+{
+    "t-shirts": {
+        "name": "👕 Футболки",
+        "products": [
+            {
+                "name": "Футболка белая",
+                "price": 1000,
+                "description": "Мягкая и удобная футболка.",
+                "photo_path": "images/t-shirt1.jpg"
+            },
+            {
+                "name": "Футболка черная",
+                "price": 1200,
+                "description": "Стильная черная футболка.",
+                "photo_path": "images/t-shirt2.jpg"
+            },
+            {
+                "name": "Футболка красная",
+                "price": 1500,
+                "description": "Яркая красная футболка.",
+                "photo_path": "images/t-shirt3.jpg"
+            }
+        ]
+    },
+    "jeans": {
+        "name": "👖 Джинсы",
+        "products": [
+            {
+                "name": "Джинсы синие",
+                "price": 2000,
+                "description": "Стильные синие джинсы.",
+                "photo_path": "images/jeans1.jpg"
+            },
+            {
+                "name": "Джинсы черные",
+                "price": 2200,
+                "description": "Стильные черные джинсы.",
+                "photo_path": "images/jeans2.jpg"
+            }
+        ]
+    },
+    "shorts": {
+        "name": "🩳 Шорты",
+        "products": [
+            {
+                "name": "Шорты спортивные",
+                "price": 1500,
+                "description": "Удобные спортивные шорты.",
+                "photo_path": "images/shorts1.jpg"
+            },
+            {
+                "name": "Шорты джинсовые",
+                "price": 1800,
+                "description": "Стильные джинсовые шорты.",
+                "photo_path": "images/shorts2.jpg"
+            }
+        ]
+    },
+    "юбки": {
+        "name": "Юбки",
+        "products": [
+            {
+                "name": "Белая",
+                "price": 1000,
+                "description": "Юбка белая",
+                "photo_path": "images/AgACAgIAAxkBAAICAmfbRPdwpSaxYTszl82-79N0zFpAAAJ88zEbyQvZSuC3dmroDaFwAQADAgADbQADNgQ.jpg"
+            }
+        ]
+    }
+}
