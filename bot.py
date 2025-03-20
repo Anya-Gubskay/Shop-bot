@@ -319,8 +319,10 @@ async def confirm_order(query: types.CallbackQuery):
 # Команда для администратора: добавить товар
 @dp.message(Command("add_product"))
 async def start_add_product(message: types.Message, state: FSMContext):
-    logger.info(ADMIN_ID)
+    
     if message.from_user.id != ADMIN_ID:
+        logger.info(message.from_user.id)
+        logger.info(ADMIN_ID)
         await message.answer("❌ У вас нет прав для выполнения этой команды.")
         return
 
