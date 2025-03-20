@@ -319,8 +319,9 @@ async def confirm_order(query: types.CallbackQuery):
 # Команда для администратора: добавить товар
 @dp.message(Command("add_product"))
 async def start_add_product(message: types.Message, state: FSMContext):
+    logger.info(message.from_user.id)
     if message.from_user.id != ADMIN_ID:
-        await message.answer("❌ У вас нет прав для выполнения этой команды. **{message.from_user.id}**")
+        await message.answer("❌ У вас нет прав для выполнения этой команды.")
         return
 
     # Создаем клавиатуру с категориями + кнопка "Создать новую категорию"
@@ -368,7 +369,6 @@ async def handle_category_selection(message: types.Message, state: FSMContext):
 @dp.message(AddProductForm.name)
 async def process_product_name(message: types.Message, state: FSMContext):
     # Сохраняем название товара
-    logger.info("Обработчик process_product_name сработал")
     await state.update_data(name=message.text)
     # Переводим бота в состояние ввода цены
     await state.set_state(AddProductForm.price)
