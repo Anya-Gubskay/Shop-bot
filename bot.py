@@ -11,7 +11,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.filters import Command
 
 API_TOKEN = os.getenv("API_TOKEN")  # Получаем токен
-ADMIN_ID = os.getenv("ADMIN_ID")  # Замени на свой Telegram ID
+ADMIN_ID = int(os.getenv("ADMIN_ID"))  # Замени на свой Telegram ID
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
@@ -321,8 +321,6 @@ async def confirm_order(query: types.CallbackQuery):
 async def start_add_product(message: types.Message, state: FSMContext):
     
     if message.from_user.id != ADMIN_ID:
-        logger.info(message.from_user.id)
-        logger.info(ADMIN_ID)
         await message.answer("❌ У вас нет прав для выполнения этой команды.")
         return
 
